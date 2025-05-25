@@ -2,7 +2,8 @@
 layout: default
 ---
 
-Text can be **bold**, _italic_, or ~~strikethrough~~.
+Hello, this is Haiyang Liu~
+I will share my opinion and note about LLM and other  technologies here.
 
 [Link to another page](./another-page.html).
 
