@@ -15,11 +15,12 @@
     {% include head-custom.html %}
     <style>
       .wrapper { width: 95%; max-width: 1200px; }
-      header { width: 200px; }
+      header { width: 200px; background: rgba(22, 27, 34, 0.85); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); border: 1px solid rgba(255, 255, 255, 0.08); text-align: center; }
       section { width: calc(100% - 260px); }
-      header img { max-width: 100px; }
+      header img { max-width: 100px; display: block; margin-left: auto; margin-right: auto; }
       @media print, screen and (max-width: 960px) {
-        header { padding-right: 0; }
+        header { padding-right: 0; text-align: left; }
+        header img { margin-left: 0; }
       }
     </style>
   </head>
@@ -33,6 +34,11 @@
         {% endif %}
 
         <p>{{ site.description | default: site.github.project_tagline }}</p>
+
+        <nav class="sidebar-links">
+          <a href="mailto:lhygpnu@qq.com">📧 Email</a>
+          <a href="https://scholar.google.com/citations?user=60KZ6o0AAAAJ&hl=zh-CN" target="_blank">🎓 Google Scholar</a>
+        </nav>
 
         {% if site.github.is_project_page %}
         <p class="view"><a href="{{ site.github.repository_url }}">View the Project on GitHub <small>{{ site.github.repository_nwo }}</small></a></p>

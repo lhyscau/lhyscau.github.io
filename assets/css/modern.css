@@ -1,7 +1,7 @@
 ---
 ---
 
-/* === Modern Typography & Styling Overrides === */
+/* === Dark Theme Styling === */
 
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
 
@@ -9,8 +9,12 @@ body {
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
   font-size: 15px;
   line-height: 1.7;
-  color: #334155;
-  background: linear-gradient(135deg, #f8fafc 0%, #eef2ff 50%, #f0f9ff 100%);
+  color: #c9d1d9;
+  background: #0d1117;
+  background-image:
+    radial-gradient(ellipse at 20% 50%, rgba(88, 28, 135, 0.08) 0%, transparent 60%),
+    radial-gradient(ellipse at 80% 20%, rgba(59, 130, 246, 0.06) 0%, transparent 60%),
+    radial-gradient(ellipse at 50% 80%, rgba(168, 85, 247, 0.05) 0%, transparent 60%);
   background-attachment: fixed;
   min-height: 100vh;
 }
@@ -26,40 +30,74 @@ header {
   float: left;
   position: fixed;
   -webkit-font-smoothing: subpixel-antialiased;
-  background: rgba(255,255,255,0.7);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
+  background: rgba(22, 27, 34, 0.85);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
   border-radius: 16px;
-  padding: 24px;
-  box-shadow: 0 1px 3px rgba(0,0,0,0.06), 0 4px 16px rgba(0,0,0,0.04);
+  padding: 28px 24px;
+  text-align: center;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.4);
 }
 
 header h1 {
   font-size: 22px;
   font-weight: 700;
   margin-bottom: 8px;
+  text-align: center;
 }
 
 header h1 a {
-  color: #1e293b;
+  color: #f0f6fc;
   text-decoration: none;
 }
 
 header h1 a:hover {
-  color: #4f46e5;
+  color: #a78bfa;
 }
 
 header img {
-  max-width: 140px;
+  max-width: 130px;
   border-radius: 50%;
-  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+  box-shadow: 0 0 0 3px rgba(168, 85, 247, 0.3), 0 8px 30px rgba(0, 0, 0, 0.5);
   margin-bottom: 16px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 header p {
   font-size: 13px;
-  color: #64748b;
+  color: #8b949e;
   line-height: 1.6;
+  text-align: center;
+}
+
+/* === Sidebar Links === */
+.sidebar-links {
+  margin-top: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.sidebar-links a {
+  display: block;
+  padding: 8px 12px;
+  border-radius: 8px;
+  font-size: 13px;
+  color: #c9d1d9;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.sidebar-links a:hover {
+  background: rgba(168, 85, 247, 0.12);
+  border-color: rgba(168, 85, 247, 0.3);
+  color: #a78bfa;
+  font-weight: 500;
 }
 
 /* === Content Section === */
@@ -73,27 +111,27 @@ section {
 h1 {
   font-size: 30px;
   font-weight: 700;
-  color: #0f172a;
+  color: #f0f6fc;
   letter-spacing: -0.02em;
 }
 
 h2 {
   font-size: 22px;
   font-weight: 600;
-  color: #1e293b;
+  color: #e6edf3;
   margin-top: 32px;
   padding-bottom: 8px;
-  border-bottom: 2px solid #e2e8f0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 h3 {
   font-size: 18px;
   font-weight: 600;
-  color: #334155;
+  color: #e6edf3;
 }
 
 h4, h5, h6 {
-  color: #475569;
+  color: #c9d1d9;
 }
 
 p {
@@ -101,19 +139,18 @@ p {
 }
 
 strong {
-  color: #1e293b;
+  color: #f0f6fc;
   font-weight: 600;
 }
 
 a {
-  color: #4f46e5;
+  color: #a78bfa;
   text-decoration: none;
   transition: color 0.2s ease;
 }
 
 a:hover, a:focus {
-  color: #3730a3;
-  font-weight: 500;
+  color: #c4b5fd;
 }
 
 /* === Code === */
@@ -123,20 +160,20 @@ code, pre {
 }
 
 code {
-  background: #f1f5f9;
+  background: rgba(168, 85, 247, 0.12);
   padding: 2px 6px;
   border-radius: 4px;
-  color: #be185d;
+  color: #c4b5fd;
 }
 
 pre {
-  background: #1e293b;
-  color: #e2e8f0;
+  background: #161b22;
+  color: #c9d1d9;
   padding: 16px 20px;
   border-radius: 10px;
-  border: none;
+  border: 1px solid rgba(255, 255, 255, 0.06);
   overflow-x: auto;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
 }
 
 pre code {
@@ -147,12 +184,12 @@ pre code {
 
 /* === Blockquote === */
 blockquote {
-  border-left: 3px solid #818cf8;
+  border-left: 3px solid #a78bfa;
   margin: 0 0 20px;
   padding: 12px 0 12px 20px;
   font-style: italic;
-  color: #475569;
-  background: rgba(238,242,255,0.5);
+  color: #8b949e;
+  background: rgba(168, 85, 247, 0.05);
   border-radius: 0 8px 8px 0;
 }
 
@@ -162,29 +199,29 @@ table {
   border-collapse: collapse;
   border-radius: 8px;
   overflow: hidden;
-  box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
 }
 
 th {
-  background: #f1f5f9;
-  color: #334155;
+  background: rgba(255, 255, 255, 0.05);
+  color: #c9d1d9;
   font-weight: 600;
 }
 
 th, td {
   text-align: left;
   padding: 10px 14px;
-  border-bottom: 1px solid #e2e8f0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
 }
 
 tr:hover td {
-  background: #f8fafc;
+  background: rgba(255, 255, 255, 0.03);
 }
 
 /* === Horizontal Rule === */
 hr {
   border: 0;
-  background: linear-gradient(90deg, transparent, #cbd5e1, transparent);
+  background: linear-gradient(90deg, transparent, rgba(168, 85, 247, 0.3), transparent);
   height: 1px;
   margin: 32px 0;
 }
@@ -196,7 +233,7 @@ footer {
   position: fixed;
   bottom: 40px;
   font-size: 12px;
-  color: #94a3b8;
+  color: #484f58;
 }
 
 /* === Lists === */
@@ -209,10 +246,17 @@ li {
   margin-bottom: 6px;
 }
 
+/* === Last Modified === */
+.last-modified {
+  font-size: 12px;
+  color: #484f58;
+  margin-top: 32px;
+}
+
 /* === Selection === */
 ::selection {
-  background: #c7d2fe;
-  color: #1e293b;
+  background: rgba(168, 85, 247, 0.3);
+  color: #f0f6fc;
 }
 
 /* === Responsive === */
@@ -231,17 +275,24 @@ li {
   header {
     padding: 20px;
     margin-bottom: 20px;
+    text-align: left;
+  }
+
+  header img {
+    max-width: 80px;
+    margin-left: 0;
   }
 
   section {
-    border: 1px solid #e5e5e5;
+    border: 1px solid rgba(255, 255, 255, 0.08);
     border-width: 1px 0;
     padding: 20px 0;
     margin: 0 0 20px;
   }
 
-  header img {
-    max-width: 80px;
+  .sidebar-links {
+    flex-direction: row;
+    flex-wrap: wrap;
   }
 }
 
