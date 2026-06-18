@@ -2,14 +2,8 @@
 layout: default
 ---
 
-### 👋 Hello, this is Haiyang Liu~
+## 👋 Hello, this is Haiyang Liu~
 
-🎓 South China Agricultural University
-
-💼 **Algorithm Engineer at Baidu**  
-&nbsp;&nbsp;&nbsp;&nbsp; *Former Intern at Li Auto*
-
-🔬 Research Interests: Large Language Models · AI Agents · Reinforcement Learning · Multimodal AI
 
 ---
 

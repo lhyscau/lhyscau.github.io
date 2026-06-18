@@ -26,7 +26,7 @@ body {
 
 /* === Header / Sidebar === */
 header {
-  width: 220px;
+  width: 260px;
   float: left;
   position: fixed;
   -webkit-font-smoothing: subpixel-antialiased;
@@ -36,7 +36,7 @@ header {
   border: 1px solid rgba(255, 255, 255, 0.08);
   border-radius: 16px;
   padding: 28px 24px;
-  text-align: center;
+  text-align: left;
   box-shadow: 0 4px 24px rgba(0, 0, 0, 0.4);
 }
 
@@ -70,7 +70,31 @@ header p {
   font-size: 13px;
   color: #8b949e;
   line-height: 1.6;
-  text-align: center;
+  text-align: left;
+}
+
+/* === Sidebar Info === */
+.sidebar-info {
+  margin-top: 12px;
+  padding-top: 12px;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.sidebar-info p {
+  font-size: 13px;
+  color: #c9d1d9;
+  line-height: 1.6;
+  margin-bottom: 4px;
+  text-align: left;
+}
+
+.sidebar-info p strong {
+  color: #f0f6fc;
+}
+
+.sidebar-info p em {
+  color: #8b949e;
+  font-size: 12px;
 }
 
 /* === Sidebar Links === */
@@ -112,7 +136,7 @@ header p {
 
 /* === Content Section === */
 section {
-  width: 700px;
+  width: 670px;
   float: right;
   padding-bottom: 60px;
 }
@@ -238,7 +262,7 @@ hr {
 
 /* === Footer === */
 footer {
-  width: 220px;
+  width: 260px;
   float: left;
   position: fixed;
   bottom: 40px;
