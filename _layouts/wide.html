@@ -14,14 +14,74 @@
     <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>💩</text></svg>">
     {% include head-custom.html %}
     <style>
-      .wrapper { width: 90%; max-width: 1000px; }
-      section { width: 100%; float: none; padding-bottom: 60px; }
+      .wrapper { width: 95%; max-width: 1200px; display: flex; gap: 40px; }
+      section { flex: 1; min-width: 0; padding-bottom: 60px; }
       header { display: none; }
       footer { display: none; }
+
+      /* === TOC Sidebar === */
+      .toc-sidebar {
+        width: 220px;
+        flex-shrink: 0;
+        position: sticky;
+        top: 40px;
+        align-self: flex-start;
+        max-height: calc(100vh - 80px);
+        overflow-y: auto;
+        padding-right: 16px;
+        border-right: 1px solid rgba(255, 255, 255, 0.08);
+      }
+      .toc-sidebar h4 {
+        font-size: 13px;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+        color: #8b949e;
+        margin-bottom: 12px;
+      }
+      .toc-sidebar nav a {
+        display: block;
+        padding: 4px 0;
+        font-size: 13px;
+        color: #8b949e;
+        text-decoration: none;
+        border-left: 2px solid transparent;
+        padding-left: 12px;
+        transition: all 0.15s ease;
+        line-height: 1.5;
+      }
+      .toc-sidebar nav a:hover {
+        color: #c4b5fd;
+        border-left-color: rgba(168, 85, 247, 0.3);
+      }
+      .toc-sidebar nav a.active {
+        color: #a78bfa;
+        border-left-color: #a78bfa;
+      }
+      .toc-sidebar nav a.toc-h3 {
+        padding-left: 28px;
+        font-size: 12px;
+      }
+
+      @media (max-width: 860px) {
+        .wrapper { flex-direction: column; }
+        .toc-sidebar {
+          width: 100%;
+          position: static;
+          max-height: none;
+          border-right: none;
+          border-bottom: 1px solid rgba(255,255,255,0.08);
+          padding-bottom: 12px;
+          margin-bottom: 20px;
+        }
+      }
     </style>
   </head>
   <body>
     <div class="wrapper">
+      <aside class="toc-sidebar">
+        <h4>📑 Outline</h4>
+        <nav id="toc"></nav>
+      </aside>
       <section>
 
       {{ content }}
@@ -29,6 +89,38 @@
       <p style="margin-top:40px;"><a href="{{ "/" | absolute_url }}">← Back</a></p>
       </section>
     </div>
+
+    <script>
+    (function() {
+      const toc = document.getElementById('toc');
+      const headings = document.querySelectorAll('section h2, section h3');
+      const links = [];
+
+      headings.forEach(function(h) {
+        const id = h.textContent.trim().replace(/\s+/g, '-').replace(/[^a-zA-Z0-9一-鿿\-]/g, '');
+        h.id = id;
+        const a = document.createElement('a');
+        a.href = '#' + id;
+        a.textContent = h.textContent.trim();
+        if (h.tagName === 'H3') a.classList.add('toc-h3');
+        toc.appendChild(a);
+        links.push({ el: a, target: h });
+      });
+
+      function onScroll() {
+        let current = null;
+        links.forEach(function(l) {
+          const top = l.target.getBoundingClientRect().top;
+          if (top < 120) current = l;
+        });
+        links.forEach(function(l) { l.el.classList.remove('active'); });
+        if (current) current.el.classList.add('active');
+      }
+
+      window.addEventListener('scroll', onScroll);
+      onScroll();
+    })();
+    </script>
     <script src="{{ "/assets/js/scale.fix.js" | relative_url }}"></script>
   </body>
 </html>
