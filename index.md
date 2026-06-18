@@ -19,6 +19,6 @@ layout: default
 
 ### 📒 Notes
 
-- [2025–2026 Campus Recruitment Interview Experience](./interview-experience.html)
+- [2025–2026 Campus Recruitment Interview Experience](./notes/interview-experience.html)
 
 *Last updated: 2026-06-18*
