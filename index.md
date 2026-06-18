@@ -6,6 +6,8 @@ Hello, this is Haiyang Liu~
 
 I will share my opinion and note about LLM and other  technologies here.
 
+- [2025–2026 校招实习面经](./interview-experience.html)
+
 <!-- [Link to another page](./another-page.html).
 
 There should be whitespace between paragraphs.
