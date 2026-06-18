@@ -102,12 +102,13 @@ header p {
   margin-top: 16px;
   display: flex;
   flex-direction: column;
+  align-items: center;
   gap: 8px;
 }
 
 .sidebar-links a {
-  display: block;
-  padding: 8px 12px;
+  display: inline-block;
+  padding: 8px 16px;
   border-radius: 8px;
   font-size: 13px;
   color: #c9d1d9;
@@ -115,6 +116,7 @@ header p {
   border: 1px solid rgba(255, 255, 255, 0.06);
   text-decoration: none;
   transition: all 0.2s ease;
+  text-align: center;
 }
 
 .sidebar-links a:hover {
@@ -125,13 +127,14 @@ header p {
 }
 
 .sidebar-text {
-  display: block;
-  padding: 8px 12px;
+  display: inline-block;
+  padding: 8px 16px;
   border-radius: 8px;
   font-size: 13px;
   color: #8b949e;
   background: rgba(255, 255, 255, 0.04);
   border: 1px solid rgba(255, 255, 255, 0.06);
+  text-align: center;
 }
 
 /* === Content Section === */
