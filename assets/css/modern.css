@@ -20,13 +20,13 @@ body {
 }
 
 .wrapper {
-  width: 900px;
+  width: 1020px;
   margin: 0 auto;
 }
 
 /* === Header / Sidebar === */
 header {
-  width: 240px;
+  width: 220px;
   float: left;
   position: fixed;
   -webkit-font-smoothing: subpixel-antialiased;
@@ -100,9 +100,19 @@ header p {
   font-weight: 500;
 }
 
+.sidebar-text {
+  display: block;
+  padding: 8px 12px;
+  border-radius: 8px;
+  font-size: 13px;
+  color: #8b949e;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+}
+
 /* === Content Section === */
 section {
-  width: 580px;
+  width: 700px;
   float: right;
   padding-bottom: 60px;
 }
@@ -228,7 +238,7 @@ hr {
 
 /* === Footer === */
 footer {
-  width: 240px;
+  width: 220px;
   float: left;
   position: fixed;
   bottom: 40px;
