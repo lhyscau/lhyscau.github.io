@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: wide
 title: 2025–2026 校招实习面经
 description: 整理了 2025 全年及 2026 年初的校招与实习面试经历，覆盖互联网大厂、AI 创业公司、自动驾驶、智能座舱、AI Agent 等多个方向。
 ---
