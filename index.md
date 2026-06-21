@@ -20,5 +20,8 @@ layout: default
 ### 📒 Notes
 
 - [2025–2026 Campus Recruitment Interview Experience](./notes/interview-experience.html)
+- [强化学习八股](./notes/八股-强化学习.html)
+- [手撕代码八股](./notes/八股-手撕代码.html)
+- [大模型通识八股](./notes/八股-通识.html)
 
-*Last updated: 2026-06-18*
+*Last updated: 2026-06-21*

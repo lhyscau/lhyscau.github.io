@@ -3,4 +3,6 @@ logo: /assets/img/dog.jpg
 description: LLMs & Agents
 # show_downloads: true
 google_analytics:
-theme: jekyll-theme-minimal
+# theme: jekyll-theme-minimal
+plugins:
+  - jekyll-seo-tag
